@@ -161,6 +161,17 @@ mammoth.extractRawText({path: "path/to/document.docx"})
     .done();
 ```
 
+You can also extract the document tree by using `mammoth.parseDoc`.
+
+```javascript
+mammoth.parseDoc({path: "path/to/document.docx"})
+    .then(function(result){
+        // { type: "document", children: [...] }
+        var root = result.value;
+    })
+    .done();
+```
+
 #### Custom style map
 
 By default,
